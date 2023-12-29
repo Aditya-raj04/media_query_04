@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: grey;
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+        }
+        div{
+            font-size: x-large;
+            text-align: center;
+        }
+        @media(min-width:400px) and (max-width:750px) {
+            
+            body{
+                background-color: rgb(205, 50, 174);
+            }
+            div::after{
+                content: 'this between 400 and 750';
+            }
+        }
+
+        @media(750px <= width <= 900px){
+            /* if the viewport is atleast 900 px then this style will take effect */
+            /* 750 ya isse kam */
+            
+            body{
+                background-color: rgb(134, 0, 0);
+            }
+            div::after{
+                content: 'this is 750px';
+            }
+        }
+        
+        @media(min-width:900px){
+             /* if the viewport is atleast 900 px then this style will take effect */
+             /* 900 ya isse jyada */
+        
+          body{
+            background-color: rgb(111, 188, 202);
+          }
+          div::after{
+           content: 'this is 900px';
+          }
+        }
+        @media(min-width:1440px){
+             /* if the viewport is atleast 900 px then this style will take effect */
+             /* 900 ya isse jyada */
+        
+          body{
+            background-color: rgb(202, 113, 111);
+          }
+          div::after{
+           content: 'this is 1440px';
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>this is a media query demo page</h1>
+    </div>
+
+</body>
+
+</html>
